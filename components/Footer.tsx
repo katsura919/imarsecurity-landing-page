@@ -81,7 +81,7 @@ export default function Footer() {
                                 <li className="flex items-start gap-3">
                                     <MapPin className="w-5 h-5 text-[var(--accent-yellow)] flex-shrink-0 mt-0.5" />
                                     <span className="text-[var(--steel-gray)] text-sm">
-                                        Tampa, FL<br />United States
+                                        Tampa, FL, United States
                                     </span>
                                 </li>
                                 <li className="flex items-center gap-3">
