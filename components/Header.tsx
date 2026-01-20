@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Shield, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,19 +27,20 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "glass py-3 border-b border-[rgba(0,212,255,0.2)]"
-          : "bg-transparent py-5"
+        ? "glass py-3 border-b border-[rgba(26,26,46,0.1)]"
+        : "bg-white/80 backdrop-blur-sm py-5"
         }`}
     >
       <div className="container-custom flex items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative">
-            <Shield className="w-8 h-8 text-[var(--electric-cyan)] transition-all duration-300 group-hover:text-[var(--safety-green)]" />
-          </div>
-          <span className="text-xl font-bold text-[var(--ice-white)]">
-            I.M.A.R <span className="text-[var(--electric-cyan)]">Security</span>
-          </span>
+          <Image
+            src="/logo.png"
+            alt="I.M.A.R Security Patrol"
+            width={140}
+            height={40}
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation - Left aligned after logo */}
@@ -47,7 +49,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors duration-300 text-sm font-medium"
+              className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors duration-300 text-sm font-medium"
             >
               {link.label}
             </Link>
@@ -71,7 +73,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-[var(--ice-white)] p-2"
+          className="md:hidden text-[var(--steel-navy)] p-2"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
@@ -84,7 +86,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 glass border-b border-[rgba(0,212,255,0.2)] transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-80 py-4" : "max-h-0 py-0"
+        className={`md:hidden absolute top-full left-0 right-0 glass border-b border-[rgba(26,26,46,0.1)] transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-80 py-4" : "max-h-0 py-0"
           }`}
       >
         <nav className="container-custom flex flex-col gap-4">
@@ -93,7 +95,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors duration-300 text-base font-medium py-2"
+              className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors duration-300 text-base font-medium py-2"
             >
               {link.label}
             </Link>

@@ -2,10 +2,11 @@
 
 import { Shield, MapPin, Phone, Mail, Clock } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer id="contact" className="relative bg-[var(--deep-space)] border-t border-[rgba(0,212,255,0.1)]">
+        <footer id="contact" className="relative bg-[#FAFAFA] border-t border-[rgba(26,26,46,0.08)]">
             {/* Main Footer */}
             <div className="section-padding pb-8">
                 <div className="container-custom">
@@ -13,10 +14,13 @@ export default function Footer() {
                         {/* Brand Column */}
                         <div className="lg:col-span-1">
                             <Link href="/" className="flex items-center gap-2 mb-4">
-                                <Shield className="w-8 h-8 text-[var(--electric-cyan)]" />
-                                <span className="text-xl font-bold text-[var(--ice-white)]">
-                                    I.M.A.R <span className="text-[var(--electric-cyan)]">Security</span>
-                                </span>
+                                <Image
+                                    src="/logo.png"
+                                    alt="I.M.A.R Security Patrol"
+                                    width={120}
+                                    height={35}
+                                    className="h-9 w-auto"
+                                />
                             </Link>
                             <p className="text-[var(--steel-gray)] text-sm mb-4 leading-relaxed">
                                 Professional security services with highly trained personnel.
@@ -30,7 +34,7 @@ export default function Footer() {
 
                         {/* Quick Links */}
                         <div>
-                            <h4 className="text-[var(--ice-white)] font-semibold mb-4">Quick Links</h4>
+                            <h4 className="text-[var(--steel-navy)] font-semibold mb-4">Quick Links</h4>
                             <ul className="space-y-2">
                                 {[
                                     { href: "#home", label: "Home" },
@@ -41,7 +45,7 @@ export default function Footer() {
                                     <li key={link.href}>
                                         <Link
                                             href={link.href}
-                                            className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors text-sm"
+                                            className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors text-sm"
                                         >
                                             {link.label}
                                         </Link>
@@ -52,7 +56,7 @@ export default function Footer() {
 
                         {/* Services */}
                         <div>
-                            <h4 className="text-[var(--ice-white)] font-semibold mb-4">Services</h4>
+                            <h4 className="text-[var(--steel-navy)] font-semibold mb-4">Services</h4>
                             <ul className="space-y-2">
                                 {[
                                     "Executive Protection",
@@ -72,34 +76,34 @@ export default function Footer() {
 
                         {/* Contact Info */}
                         <div>
-                            <h4 className="text-[var(--ice-white)] font-semibold mb-4">Contact Us</h4>
+                            <h4 className="text-[var(--steel-navy)] font-semibold mb-4">Contact Us</h4>
                             <ul className="space-y-3">
                                 <li className="flex items-start gap-3">
-                                    <MapPin className="w-5 h-5 text-[var(--electric-cyan)] flex-shrink-0 mt-0.5" />
+                                    <MapPin className="w-5 h-5 text-[var(--accent-yellow)] flex-shrink-0 mt-0.5" />
                                     <span className="text-[var(--steel-gray)] text-sm">
                                         Tampa, FL<br />United States
                                     </span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Phone className="w-5 h-5 text-[var(--electric-cyan)] flex-shrink-0" />
+                                    <Phone className="w-5 h-5 text-[var(--accent-yellow)] flex-shrink-0" />
                                     <a
                                         href="tel:+1234567890"
-                                        className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors text-sm"
+                                        className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors text-sm"
                                     >
                                         (555) 123-4567
                                     </a>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Mail className="w-5 h-5 text-[var(--electric-cyan)] flex-shrink-0" />
+                                    <Mail className="w-5 h-5 text-[var(--accent-yellow)] flex-shrink-0" />
                                     <a
                                         href="mailto:contact@imarsecurity.com"
-                                        className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors text-sm"
+                                        className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors text-sm"
                                     >
                                         contact@imarsecurity.com
                                     </a>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Clock className="w-5 h-5 text-[var(--electric-cyan)] flex-shrink-0" />
+                                    <Clock className="w-5 h-5 text-[var(--accent-yellow)] flex-shrink-0" />
                                     <span className="text-[var(--steel-gray)] text-sm">
                                         24/7 Emergency Response
                                     </span>
@@ -111,7 +115,7 @@ export default function Footer() {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-[rgba(0,212,255,0.1)] py-6">
+            <div className="border-t border-[rgba(26,26,46,0.08)] py-6 bg-white">
                 <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-[var(--steel-gray)] text-sm">
                         © {new Date().getFullYear()} I.M.A.R Security. All rights reserved.
@@ -119,13 +123,13 @@ export default function Footer() {
                     <div className="flex items-center gap-6">
                         <Link
                             href="#"
-                            className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors text-sm"
+                            className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors text-sm"
                         >
                             Privacy Policy
                         </Link>
                         <Link
                             href="#"
-                            className="text-[var(--steel-gray)] hover:text-[var(--electric-cyan)] transition-colors text-sm"
+                            className="text-[var(--steel-gray)] hover:text-[var(--accent-yellow)] transition-colors text-sm"
                         >
                             Terms of Service
                         </Link>

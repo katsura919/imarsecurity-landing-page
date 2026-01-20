@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ValueProps from "@/components/ValueProps";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <ValueProps />
         <AboutSection />
         <ServicesSection />
+        <TestimonialsSection />
         <CTASection />
       </main>
       <Footer />

@@ -28,13 +28,13 @@ export default function ValueProps() {
     return (
         <section className="section-padding relative">
             {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[var(--deep-space)] to-[var(--steel-navy)]" />
+            <div className="absolute inset-0 bg-[#FEF9E7]" />
 
             <div className="relative z-10 container-custom">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--ice-white)] mb-4">
-                        What We <span className="text-[var(--electric-cyan)]">Stand For</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--steel-navy)] mb-4">
+                        What We <span className="text-[var(--accent-yellow)]">Stand For</span>
                     </h2>
                     <p className="text-[var(--steel-gray)] max-w-2xl mx-auto">
                         Excellence, integrity, and unwavering commitment to your safety
@@ -47,7 +47,7 @@ export default function ValueProps() {
                     {values.map((value, index) => (
                         <div
                             key={value.title}
-                            className="glass-card rounded-xl overflow-hidden group hover:border-[rgba(0,212,255,0.4)] transition-all duration-300 hover:-translate-y-2"
+                            className="glass-card rounded-xl overflow-hidden group hover:border-[rgba(245,158,11,0.4)] transition-all duration-300 hover:-translate-y-2"
                             style={{
                                 animationDelay: `${index * 100}ms`,
                             }}
@@ -60,12 +60,12 @@ export default function ValueProps() {
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[var(--dark-steel)] to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent opacity-80" />
                             </div>
 
                             {/* Content */}
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold text-[var(--ice-white)] mb-3">
+                                <h3 className="text-xl font-semibold text-[var(--steel-navy)] mb-3">
                                     {value.title}
                                 </h3>
                                 <p className="text-[var(--steel-gray)] leading-relaxed">
@@ -86,9 +86,9 @@ export default function ValueProps() {
                     ].map((stat) => (
                         <div key={stat.label} className="text-center">
                             <div className="flex justify-center mb-2">
-                                <stat.icon className="w-5 h-5 text-[var(--electric-cyan)] opacity-50" />
+                                <stat.icon className="w-5 h-5 text-[var(--accent-yellow)] opacity-80" />
                             </div>
-                            <div className="text-3xl md:text-4xl font-bold text-[var(--electric-cyan)] mb-1">
+                            <div className="text-3xl md:text-4xl font-bold text-[var(--accent-gold)] mb-1">
                                 {stat.value}
                             </div>
                             <div className="text-sm text-[var(--steel-gray)]">

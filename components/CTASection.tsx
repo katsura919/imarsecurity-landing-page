@@ -5,25 +5,25 @@ import { Phone, Mail, Shield } from "lucide-react";
 export default function CTASection() {
     return (
         <section className="section-padding relative overflow-hidden">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[var(--steel-navy)] via-[var(--shield-blue)] to-[var(--steel-navy)]" />
-            <div className="absolute inset-0 grid-pattern opacity-20" />
+            {/* Background - Warm Orange Tint */}
+            <div className="absolute inset-0 bg-[#FFEDD5]" />
+            <div className="absolute inset-0 grid-pattern opacity-15" />
 
-            {/* Glowing Orbs */}
-            <div className="absolute top-0 left-1/4 w-64 h-64 bg-[var(--electric-cyan)] rounded-full blur-[120px] opacity-15" />
-            <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-[var(--safety-green)] rounded-full blur-[100px] opacity-10" />
+            {/* Decorative Elements */}
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-[var(--accent-yellow)] rounded-full blur-[120px] opacity-10" />
+            <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-[var(--accent-amber)] rounded-full blur-[100px] opacity-8" />
 
             <div className="relative z-10 container-custom">
                 <div className="max-w-3xl mx-auto text-center">
                     {/* Icon */}
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[rgba(0,212,255,0.1)] border border-[rgba(0,212,255,0.3)] mb-6 glow-cyan-sm">
-                        <Shield className="w-8 h-8 text-[var(--electric-cyan)]" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[rgba(245,158,11,0.12)] border border-[rgba(245,158,11,0.25)] mb-6">
+                        <Shield className="w-8 h-8 text-[var(--accent-yellow)]" />
                     </div>
 
                     {/* Headline */}
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--ice-white)] mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--steel-navy)] mb-4">
                         Ready to Secure Your
-                        <span className="gradient-text"> Peace of Mind?</span>
+                        <span className="block gradient-text"> Peace of Mind?</span>
                     </h2>
 
                     {/* Subheadline */}
@@ -36,7 +36,7 @@ export default function CTASection() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a
                             href="tel:+1234567890"
-                            className="btn-primary flex items-center gap-2 text-base px-8 py-4 animate-pulse-glow"
+                            className="btn-primary flex items-center gap-2 text-base px-8 py-4"
                         >
                             <Phone className="w-5 h-5" />
                             Call: (555) 123-4567
